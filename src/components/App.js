@@ -1,7 +1,15 @@
+import React, { Component } from "react";
+import Tag from "./Tag";
 import "../css/App.css";
 
-function App() {
-  return <div className="App"></div>;
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Tag content="tag-name" />
+      </div>
+    );
+  }
 }
 
 export default App;
