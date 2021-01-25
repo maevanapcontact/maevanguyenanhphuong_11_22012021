@@ -1,5 +1,6 @@
 .gallery {
   position: relative;
+  margin-bottom: 15px;
 }
 
 .gallery,
@@ -34,6 +35,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .gallery {
+    margin-bottom: 25px;
+  }
+
   .gallery,
   .gallery img {
     height: 415px;
