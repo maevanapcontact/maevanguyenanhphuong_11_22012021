@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Tag from "./Tag";
 import Thumb from "./Thumb";
 import Banner from "./Banner";
+import Nav from "./Nav";
 import "../css/App.css";
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           imgSrc="./images/homepage-banner.jpg"
           imgAlt="Landscape"
         />
+        <Nav />
       </div>
     );
   }
