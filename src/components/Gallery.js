@@ -2,14 +2,43 @@ import React, { Component } from "react";
 import "../css/Gallery.css";
 
 class Gallery extends Component {
+  state = {
+    currentPicture: 0,
+  };
+
+  goToPreviousImage = () => {
+    this.setState((prevState) => ({
+      currentPicture:
+        prevState.currentPicture === 0
+          ? this.props.images.length - 1
+          : prevState.currentPicture - 1,
+    }));
+  };
+
+  goToNextImage = () => {
+    this.setState((prevState) => ({
+      currentPicture:
+        prevState.currentPicture === this.props.images.length - 1
+          ? 0
+          : prevState.currentPicture + 1,
+    }));
+  };
+
   render() {
     const { images } = this.props;
+    const { currentPicture } = this.state;
 
     return (
       <div className="gallery">
-        <img src={images[0]} alt={`location`} />
-        <span className="fas fa-chevron-left"></span>
-        <span className="fas fa-chevron-right"></span>
+        <img src={images[currentPicture]} alt={`location`} />
+        <span
+          className="fas fa-chevron-left"
+          onClick={() => this.goToPreviousImage()}
+        ></span>
+        <span
+          className="fas fa-chevron-right"
+          onClick={() => this.goToNextImage()}
+        ></span>
       </div>
     );
   }
