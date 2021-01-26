@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/maevanguyenanhphuong_11_22012021/static/css/main.c7eced1d.chunk.css",
+    "main.js": "/maevanguyenanhphuong_11_22012021/static/js/main.148a508b.chunk.js",
+    "main.js.map": "/maevanguyenanhphuong_11_22012021/static/js/main.148a508b.chunk.js.map",
+    "runtime-main.js": "/maevanguyenanhphuong_11_22012021/static/js/runtime-main.e23e0019.js",
+    "runtime-main.js.map": "/maevanguyenanhphuong_11_22012021/static/js/runtime-main.e23e0019.js.map",
+    "static/js/2.266c6056.chunk.js": "/maevanguyenanhphuong_11_22012021/static/js/2.266c6056.chunk.js",
+    "static/js/2.266c6056.chunk.js.map": "/maevanguyenanhphuong_11_22012021/static/js/2.266c6056.chunk.js.map",
+    "static/js/3.82f8c108.chunk.js": "/maevanguyenanhphuong_11_22012021/static/js/3.82f8c108.chunk.js",
+    "static/js/3.82f8c108.chunk.js.map": "/maevanguyenanhphuong_11_22012021/static/js/3.82f8c108.chunk.js.map",
+    "index.html": "/maevanguyenanhphuong_11_22012021/index.html",
+    "static/css/main.c7eced1d.chunk.css.map": "/maevanguyenanhphuong_11_22012021/static/css/main.c7eced1d.chunk.css.map",
+    "static/js/2.266c6056.chunk.js.LICENSE.txt": "/maevanguyenanhphuong_11_22012021/static/js/2.266c6056.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e23e0019.js",
+    "static/js/2.266c6056.chunk.js",
+    "static/css/main.c7eced1d.chunk.css",
+    "static/js/main.148a508b.chunk.js"
+  ]
+}
