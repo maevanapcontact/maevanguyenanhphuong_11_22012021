@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../css/App.css";
-import { data } from "../data";
+// import { data } from "../data";
 
 // import Homepage from "./Homepage";
 // import LocationPage from "./LocationPage";

@@ -3,7 +3,7 @@
   height: 100%;
   min-width: 335px;
   background: #f7f7f7;
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   margin-bottom: 20px;
 }
 
@@ -42,9 +42,17 @@
   margin-bottom: 6px;
 }
 
+.dropdown-list.drop-close {
+  display: none;
+}
+
+.dropdown-list.drop-open {
+  display: open;
+}
+
 @media screen and (min-width: 768px) {
   .dropdown {
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
   }
 
   .dropdown h3 {
