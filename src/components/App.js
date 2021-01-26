@@ -27,15 +27,21 @@ class App extends Component {
       <div className="app">
         <Route
           exact
-          path="/"
+          path="/maevanguyenanhphuong_11_22012021/"
           render={() => (
             <Homepage changeLocation={this.changeCurrentLocation} />
           )}
         />
-        <Route path="/error" component={ErrorPage} />
-        <Route path="/about" component={AboutPage} />
         <Route
-          path="/location"
+          path="/maevanguyenanhphuong_11_22012021/error"
+          component={ErrorPage}
+        />
+        <Route
+          path="/maevanguyenanhphuong_11_22012021/about"
+          component={AboutPage}
+        />
+        <Route
+          path="/maevanguyenanhphuong_11_22012021/location"
           render={() => <LocationPage locationData={locationData} />}
         />
       </div>

@@ -6,15 +6,15 @@ class Nav extends Component {
   render() {
     return (
       <nav className="main-nav">
-        <Link to="/">
+        <Link to="/maevanguyenanhphuong_11_22012021/">
           <img src="./images/logo.png" alt="Kasa" />
         </Link>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <Link to="/maevanguyenanhphuong_11_22012021/">Accueil</Link>
           </li>
           <li>
-            <Link to="/about">A propos</Link>
+            <Link to="/maevanguyenanhphuong_11_22012021/about">A propos</Link>
           </li>
         </ul>
       </nav>
