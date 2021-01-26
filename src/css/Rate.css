@@ -1,3 +1,7 @@
+.rate {
+  min-width: 160px;
+}
+
 .rate span {
   font-size: 1rem;
   color: #e3e3e3;

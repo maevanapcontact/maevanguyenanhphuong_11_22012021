@@ -5,10 +5,10 @@ import "../css/Thumb.css";
 
 class Thumb extends Component {
   render() {
-    const { title, src } = this.props;
+    const { title, src, changeLocation, id } = this.props;
 
     return (
-      <div className="thumb">
+      <div className="thumb" onClick={() => changeLocation(id)}>
         <Link to="/location" title={title} className="thumb-link">
           <div className="thumb-cover"></div>
           <img src={src} alt={title} />
@@ -22,6 +22,8 @@ class Thumb extends Component {
 Thumb.propTypes = {
   title: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
+  changeLocation: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Thumb;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "../css/Homepage.css";
 import { data } from "../data";
 
@@ -9,6 +10,8 @@ import Footer from "./Footer";
 
 class Homepage extends Component {
   render() {
+    const { changeLocation } = this.props;
+
     return (
       <div className="homepage">
         <header className="main-header">
@@ -22,7 +25,12 @@ class Homepage extends Component {
         <main className="main-content">
           {data.map((elt) => (
             <article key={elt.id} className="location-elt">
-              <Thumb title={elt.title} src={elt.cover} />
+              <Thumb
+                title={elt.title}
+                src={elt.cover}
+                changeLocation={changeLocation}
+                id={elt.id}
+              />
             </article>
           ))}
         </main>
@@ -31,5 +39,9 @@ class Homepage extends Component {
     );
   }
 }
+
+Homepage.propTypes = {
+  changeLocation: PropTypes.func.isRequired,
+};
 
 export default Homepage;
