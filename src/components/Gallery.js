@@ -32,14 +32,19 @@ class Gallery extends Component {
     return (
       <div className="gallery">
         <img src={images[currentPicture]} alt={`location`} />
-        <span
-          className="fas fa-chevron-left"
-          onClick={() => this.goToPreviousImage()}
-        ></span>
-        <span
-          className="fas fa-chevron-right"
-          onClick={() => this.goToNextImage()}
-        ></span>
+
+        {images.length > 1 && (
+          <span
+            className="fas fa-chevron-left"
+            onClick={() => this.goToPreviousImage()}
+          ></span>
+        )}
+        {images.length > 1 && (
+          <span
+            className="fas fa-chevron-right"
+            onClick={() => this.goToNextImage()}
+          ></span>
+        )}
       </div>
     );
   }

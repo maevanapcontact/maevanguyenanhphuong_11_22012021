@@ -19,11 +19,10 @@ class Dropdown extends Component {
 
     return (
       <div className="dropdown">
-        <h3>
+        <h3 onClick={() => this.toggleList()}>
           {title}
           <span
             className={isOpen ? "fas fa-chevron-up" : "fas fa-chevron-down"}
-            onClick={() => this.toggleList()}
           ></span>
         </h3>
 
