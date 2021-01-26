@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "../css/Tag.css";
 
 class Tag extends Component {
@@ -8,5 +9,9 @@ class Tag extends Component {
     return <div className="tag">{content}</div>;
   }
 }
+
+Tag.propTypes = {
+  content: PropTypes.string.isRequired,
+};
 
 export default Tag;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "../css/Banner.css";
 
 class Banner extends Component {
@@ -14,5 +15,11 @@ class Banner extends Component {
     );
   }
 }
+
+Banner.propTypes = {
+  content: PropTypes.string,
+  imgSrc: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string.isRequired,
+};
 
 export default Banner;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "../css/LocationPage.css";
 
 import Nav from "./Nav";
@@ -55,5 +56,9 @@ class LocationPage extends Component {
     );
   }
 }
+
+LocationPage.propTypes = {
+  locationData: PropTypes.object.isRequired,
+};
 
 export default LocationPage;
