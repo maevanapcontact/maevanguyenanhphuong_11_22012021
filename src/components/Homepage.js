@@ -5,6 +5,7 @@ import { data } from "../data";
 import Thumb from "./Thumb";
 import Banner from "./Banner";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 class Homepage extends Component {
   render() {
@@ -25,6 +26,7 @@ class Homepage extends Component {
             </article>
           ))}
         </main>
+        <Footer />
       </div>
     );
   }

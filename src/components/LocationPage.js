@@ -7,6 +7,7 @@ import Tag from "./Tag";
 import Host from "./Host";
 import Rate from "./Rate";
 import Dropdown from "./Dropdown";
+import Footer from "./Footer";
 
 class LocationPage extends Component {
   render() {
@@ -24,8 +25,10 @@ class LocationPage extends Component {
 
     return (
       <div className="location-page">
-        <Nav />
-        <Gallery images={pictures} />
+        <header>
+          <Nav />
+          <Gallery images={pictures} />
+        </header>
 
         <main className="main-location">
           <header className="location-header">
@@ -47,6 +50,7 @@ class LocationPage extends Component {
             <Dropdown title="Equipements" content={equipments} />
           </section>
         </main>
+        <Footer />
       </div>
     );
   }

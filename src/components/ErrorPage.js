@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../css/ErrorPage.css";
 
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 class ErrorPage extends Component {
   render() {
@@ -19,6 +20,7 @@ class ErrorPage extends Component {
             Retourner sur la page d'accueil
           </a>
         </main>
+        <Footer />
       </div>
     );
   }
