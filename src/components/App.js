@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "../css/App.css";
-import { data } from "../data";
+// import { data } from "../data";
 
-import LocationPage from "./LocationPage";
+import ErrorPage from "./ErrorPage";
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <LocationPage locationData={data[0]} />
+        <ErrorPage />
       </div>
     );
   }
