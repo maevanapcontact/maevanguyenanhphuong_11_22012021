@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "../css/Thumb.css";
 
 class Thumb extends Component {
@@ -8,11 +9,11 @@ class Thumb extends Component {
 
     return (
       <div className="thumb">
-        <a href="index.html" title={title} className="thumb-link">
+        <Link to="/location" title={title} className="thumb-link">
           <div className="thumb-cover"></div>
           <img src={src} alt={title} />
           <h2>{title}</h2>
-        </a>
+        </Link>
       </div>
     );
   }

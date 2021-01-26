@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../css/ErrorPage.css";
 
 import Nav from "./Nav";
@@ -16,9 +17,9 @@ class ErrorPage extends Component {
           <span className="error-tagline">
             Oops! La page que vous demandez n'existe pas.
           </span>
-          <a href="index.html" title="Homepage">
+          <Link to="/" title="Homepage">
             Retourner sur la page d'accueil
-          </a>
+          </Link>
         </main>
         <Footer />
       </div>

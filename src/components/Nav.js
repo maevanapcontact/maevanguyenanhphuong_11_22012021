@@ -1,19 +1,20 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../css/Nav.css";
 
 class Nav extends Component {
   render() {
     return (
       <nav className="main-nav">
-        <a href="index.html">
+        <Link to="/">
           <img src="./images/logo.png" alt="Kasa" />
-        </a>
+        </Link>
         <ul>
           <li>
-            <a href="index.html">Accueil</a>
+            <Link to="/">Accueil</Link>
           </li>
           <li>
-            <a href="index.html">A propos</a>
+            <Link to="/about">A propos</Link>
           </li>
         </ul>
       </nav>
