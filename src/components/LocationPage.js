@@ -1,18 +1,21 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import { Redirect } from "react-router-dom";
 import "../css/LocationPage.css";
+import { data } from "../data";
 
-import Nav from "./Nav";
 import Gallery from "./Gallery";
 import Tag from "./Tag";
 import Host from "./Host";
 import Rate from "./Rate";
 import Dropdown from "./Dropdown";
-import Footer from "./Footer";
 
 class LocationPage extends Component {
   render() {
-    const { locationData } = this.props;
+    const idParam = this.props.match.params.id;
+    if (!data.some((elt) => elt.id === idParam)) return <Redirect to="/404" />;
+
+    const currentLocation = data.filter((elt) => elt.id === idParam)[0];
+
     const {
       title,
       location,
@@ -22,12 +25,11 @@ class LocationPage extends Component {
       tags,
       rating,
       description,
-    } = locationData;
+    } = currentLocation;
 
     return (
       <div className="location-page">
         <header>
-          <Nav />
           <Gallery images={pictures} />
         </header>
 
@@ -51,14 +53,9 @@ class LocationPage extends Component {
             <Dropdown title="Equipements" content={equipments} />
           </section>
         </main>
-        <Footer />
       </div>
     );
   }
 }
-
-LocationPage.propTypes = {
-  locationData: PropTypes.object.isRequired,
-};
 
 export default LocationPage;

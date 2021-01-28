@@ -5,15 +5,11 @@ import "../css/Thumb.css";
 
 class Thumb extends Component {
   render() {
-    const { title, src, changeLocation, id } = this.props;
+    const { title, src, id } = this.props;
 
     return (
-      <div className="thumb" onClick={() => changeLocation(id)}>
-        <Link
-          to="/maevanguyenanhphuong_11_22012021/location"
-          title={title}
-          className="thumb-link"
-        >
+      <div className="thumb">
+        <Link to={`/location/${id}`} title={title} className="thumb-link">
           <div className="thumb-cover"></div>
           <img src={src} alt={title} />
           <h2>{title}</h2>
@@ -26,7 +22,6 @@ class Thumb extends Component {
 Thumb.propTypes = {
   title: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
-  changeLocation: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
 };
 

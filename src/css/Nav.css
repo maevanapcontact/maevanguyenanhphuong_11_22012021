@@ -4,6 +4,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 .main-nav img {

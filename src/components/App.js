@@ -1,49 +1,32 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "../css/App.css";
-import { data } from "../data";
 
+import Nav from "./Nav";
+import Footer from "./Footer";
 import Homepage from "./Homepage";
 import LocationPage from "./LocationPage";
 import ErrorPage from "./ErrorPage";
 import AboutPage from "./AboutPage";
 
 class App extends Component {
-  state = {
-    currentLocationId: data[0].id,
-  };
-
-  changeCurrentLocation = (newLocationId) => {
-    this.setState({
-      currentLocationId: newLocationId,
-    });
-  };
-
   render() {
-    const locationData = data.find(
-      (elt) => elt.id === this.state.currentLocationId
-    );
     return (
       <div className="app">
-        <Route
-          exact
-          path="/maevanguyenanhphuong_11_22012021/"
-          render={() => (
-            <Homepage changeLocation={this.changeCurrentLocation} />
-          )}
-        />
-        <Route
-          path="/maevanguyenanhphuong_11_22012021/error"
-          component={ErrorPage}
-        />
-        <Route
-          path="/maevanguyenanhphuong_11_22012021/about"
-          component={AboutPage}
-        />
-        <Route
-          path="/maevanguyenanhphuong_11_22012021/location"
-          render={() => <LocationPage locationData={locationData} />}
-        />
+        <Nav />
+
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/about" component={AboutPage} />
+          <Route
+            path="/location/:id"
+            render={(props) => <LocationPage {...props} />}
+          />
+          <Route path="*" component={ErrorPage} />
+        </Switch>
+
+        {/* <Route component={ErrorPage} /> */}
+        <Footer />
       </div>
     );
   }
