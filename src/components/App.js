@@ -16,16 +16,21 @@ class App extends Component {
         <Nav />
 
         <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/about" component={AboutPage} />
           <Route
-            path="/location/:id"
+            exact
+            path="/maevanguyenanhphuong_11_22012021/"
+            component={Homepage}
+          />
+          <Route
+            path="/maevanguyenanhphuong_11_22012021/about"
+            component={AboutPage}
+          />
+          <Route
+            path="/maevanguyenanhphuong_11_22012021/location/:id"
             render={(props) => <LocationPage {...props} />}
           />
           <Route path="*" component={ErrorPage} />
         </Switch>
-
-        {/* <Route component={ErrorPage} /> */}
         <Footer />
       </div>
     );
