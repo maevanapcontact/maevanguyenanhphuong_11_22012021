@@ -12,8 +12,7 @@ import Dropdown from "./Dropdown";
 class LocationPage extends Component {
   render() {
     const idParam = this.props.match.params.id;
-    if (!data.some((elt) => elt.id === idParam))
-      return <Redirect to="/maevanguyenanhphuong_11_22012021/404" />;
+    if (!data.some((elt) => elt.id === idParam)) return <Redirect to="/404" />;
 
     const currentLocation = data.filter((elt) => elt.id === idParam)[0];
 

@@ -9,11 +9,7 @@ class Thumb extends Component {
 
     return (
       <div className="thumb">
-        <Link
-          to={`/maevanguyenanhphuong_11_22012021/location/${id}`}
-          title={title}
-          className="thumb-link"
-        >
+        <Link to={`/location/${id}`} title={title} className="thumb-link">
           <div className="thumb-cover"></div>
           <img src={src} alt={title} />
           <h2>{title}</h2>

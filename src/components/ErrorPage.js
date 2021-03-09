@@ -11,7 +11,7 @@ class ErrorPage extends Component {
           <span className="error-tagline">
             Oops! La page que vous demandez n'existe pas.
           </span>
-          <Link to="/maevanguyenanhphuong_11_22012021/" title="Homepage">
+          <Link to="/" title="Homepage">
             Retourner sur la page d'accueil
           </Link>
         </main>

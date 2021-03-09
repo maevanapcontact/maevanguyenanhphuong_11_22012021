@@ -9,7 +9,7 @@ class AboutPage extends Component {
     return (
       <div className="about">
         <header>
-          <Banner imgSrc="/images/about-banner.jpg" imgAlt="Landscape" />
+          <Banner imgSrc="./images/about-banner.jpg" imgAlt="Landscape" />
         </header>
         <main>
           {about.map((elt) => (
